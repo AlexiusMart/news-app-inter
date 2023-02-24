@@ -1,0 +1,52 @@
+@import '@/styles/abstracts/variables.scss';
+
+.wrapper {
+  width: 248px;
+  height: 204px;
+  padding: 16px 0px;
+  background: $c-background-element;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: unset;
+  border-radius: none;
+}
+
+.subtitle {
+  font-weight: $fw-bold;
+  font-size: $fs-subtitle;
+  line-height: 20px;
+  color: $c-subtitle;
+  margin-bottom: 0;
+}
+
+.h3 {
+  font-weight: $fw-bold;
+  font-size: $fs-h3;
+  line-height: 22px;
+  color: $c-h3;
+  margin-top: 8px;
+}
+
+.wrapperLink {
+  margin-bottom: 4px;
+
+  .link {
+    font-weight: $fw-bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: $c-primary;
+    margin: 4px;
+  }
+}
+
+.date {
+  position: absolute;
+  right: 0;
+  bottom: -16px;
+  font-weight: $fw-medium;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 15px;
+  color: $c-date;
+}
