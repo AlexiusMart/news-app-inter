@@ -1,7 +1,7 @@
-import Post from '@/component/posts/preview-post/Post'
+import NewsCatalog from '@/component/news-catalog/NewsCatalog'
 import Head from 'next/head'
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Head>
@@ -14,7 +14,9 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <Post />
+      <NewsCatalog />
     </>
   )
 }
+
+export default Home

@@ -1,0 +1,21 @@
+@import '@/styles/abstracts/variables.scss';
+
+.btn {
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  padding: 11px 10px;
+  font-weight: $fw-bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.btn:hover {
+  border: 1px solid #ffffff;
+}
+
+.btnActive {
+  color: #000000;
+  background-color: #ffffff;
+}

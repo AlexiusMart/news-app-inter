@@ -27,9 +27,7 @@ const Post = () => {
             ПОСМОТРЕТЬ
           </Button>
         </CardActions>
-        <Typography className={styles.date}>
-        Добавлено 6.02.2020
-      </Typography>
+        <Typography className={styles.date}>Добавлено 6.02.2020</Typography>
       </Card>
     </>
   )
