@@ -1,20 +1,17 @@
-import NewsCatalog from '@/component/news-catalog/NewsCatalog'
+import Favicon from '@/components/Head/favicon/Favicon'
+import Seo from '@/components/Head/seo/Seo'
+import NewsContainer from '@/components/news-container/NewsContainer'
 import Head from 'next/head'
 
 const Home = () => {
   return (
     <>
       <Head>
-        <title>Актуальные новости в IT</title>
-        <meta
-          name='description'
-          content='Список всех новых актуальных новостей в IT'
-        />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='icon' href='/favicon.ico' />
+        <Seo />
+        <Favicon />
       </Head>
 
-      <NewsCatalog />
+      <NewsContainer />
     </>
   )
 }

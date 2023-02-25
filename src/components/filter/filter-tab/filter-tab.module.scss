@@ -9,13 +9,21 @@
   line-height: 17px;
   text-transform: uppercase;
   color: #ffffff;
+  margin-bottom: 8px;
+  margin-right: 16px;
 }
 
 .btn:hover {
   border: 1px solid #ffffff;
 }
 
-.btnActive {
+.active {
   color: #000000;
+  background-color: #ffffff;
+  margin-bottom: 8px;
+  margin-right: 16px;
+}
+
+.btnActive:hover {
   background-color: #ffffff;
 }

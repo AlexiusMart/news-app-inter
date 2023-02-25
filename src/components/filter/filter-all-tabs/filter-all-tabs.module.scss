@@ -1,0 +1,8 @@
+@import '@/styles/abstracts/variables.scss';
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
