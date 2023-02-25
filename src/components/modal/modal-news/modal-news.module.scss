@@ -1,0 +1,15 @@
+@import '@/styles/abstracts/variables.scss';
+
+.box {
+  position: relative;
+  margin: 51px auto;
+  width: 851px;
+  min-height: 780px;
+  background: $c-background-element;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
+  padding-top: 40px;
+}
+
+.tab {
+  color: $c-primary;
+}

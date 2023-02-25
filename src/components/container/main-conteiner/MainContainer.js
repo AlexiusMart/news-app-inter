@@ -1,3 +1,4 @@
+import ModalNews from '@/components/modal/modal-news/ModalNews'
 import NewsContainer from '../news-container/NewsContainer'
 
 import styles from './main-container.module.scss'
@@ -5,7 +6,7 @@ import styles from './main-container.module.scss'
 const MainContainer = () => {
   return (
     <div className={styles.wrapper}>
-      <NewsContainer />
+      <ModalNews />
     </div>
   )
 }

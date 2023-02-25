@@ -5,6 +5,7 @@ import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 
 import styles from './preview-post.module.scss'
+import SubTitle from '@/components/heading/subtitle/Subtitle'
 
 const PreviewPost = () => {
   const [open, setOpen] = useState(false)
@@ -15,13 +16,7 @@ const PreviewPost = () => {
     <>
       <Card sx={{maxWidth: 248, maxHeight: 204}} className={styles.wrapper}>
         <CardContent>
-          <Typography
-            className={styles.subtitle}
-            color='text.secondary'
-            gutterBottom
-          >
-            Россия, Мурманск
-          </Typography>
+          <SubTitle />
           <Typography variant='h3' component='div' className={styles.h3}>
             Банк доверил роботам процессы в операционном блоке
           </Typography>

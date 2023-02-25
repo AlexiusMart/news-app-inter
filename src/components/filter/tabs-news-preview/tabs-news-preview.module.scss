@@ -1,0 +1,13 @@
+@import '@/styles/abstracts/variables.scss';
+
+.tab {
+  border-radius: 0;
+  padding: 11px 10px;
+  font-weight: $fw-bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: $c-primary;
+  margin-right: 16px;
+}
