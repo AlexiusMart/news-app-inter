@@ -1,24 +1,27 @@
-import Stack from '@mui/material/Stack'
+import FilterReset from '../filter-reset/FilterReset'
 import FilterTab from '../filter-tab/FilterTab'
 
 import styles from './filter-all-tabs.module.scss'
 
 const FilterAllTabs = () => {
   return (
-    <>
-      <Stack spacing={2} direction='row' className={styles.filters}>
-        <FilterTab />
-        <FilterTab />
-        <FilterTab />
-        <FilterTab />
-        <FilterTab />
-        <FilterTab />
-        <FilterTab />
-        <FilterTab />
-        <FilterTab />
-        <FilterTab />
-      </Stack>
-    </>
+    <div className={styles.wrapper}>
+      <div>
+        <ul className={styles.tabs}>
+          <FilterTab />
+          <FilterTab />
+          <FilterTab />
+          <FilterTab />
+          <FilterTab />
+          <FilterTab />
+          <FilterTab />
+          <FilterTab />
+        </ul>
+      </div>
+      <div className={styles.reset}>
+        <FilterReset />
+      </div>
+    </div>
   )
 }
 

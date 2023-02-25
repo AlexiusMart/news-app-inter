@@ -1,6 +1,6 @@
 @import '@/styles/abstracts/variables.scss';
 
-.btn {
+.tab {
   border: 1px solid #ffffff;
   border-radius: 0;
   padding: 11px 10px;
@@ -11,19 +11,19 @@
   color: #ffffff;
   margin-bottom: 8px;
   margin-right: 16px;
+  cursor: pointer;
 }
 
-.btn:hover {
+.tab:hover {
   border: 1px solid #ffffff;
 }
 
 .active {
   color: #000000;
   background-color: #ffffff;
-  margin-bottom: 8px;
-  margin-right: 16px;
+  // margin: 0 16px 8px 0 !important;
 }
 
-.btnActive:hover {
+.active:hover {
   background-color: #ffffff;
 }

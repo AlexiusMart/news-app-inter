@@ -1,8 +1,15 @@
 @import '@/styles/abstracts/variables.scss';
 
-.filters {
+.wrapper {
+  margin-top: 24px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-right: 64px;
+  }
+  .reset {
+    width: 82px;
+  }
 }

@@ -1,7 +1,7 @@
 import Favicon from '@/components/Head/favicon/Favicon'
 import Seo from '@/components/Head/seo/Seo'
-import NewsContainer from '@/components/news-container/NewsContainer'
 import Head from 'next/head'
+import MainContainer from '@/components/container/main-conteiner/MainContainer'
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
         <Favicon />
       </Head>
 
-      <NewsContainer />
+      <MainContainer />
     </>
   )
 }

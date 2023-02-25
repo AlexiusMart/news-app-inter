@@ -4,9 +4,13 @@ import CardContent from '@mui/material/CardContent'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 
-import styles from './post.module.scss'
+import styles from './preview-post.module.scss'
 
-const Post = () => {
+const PreviewPost = () => {
+  const [open, setOpen] = useState(false)
+  const handleOpen = () => setOpen(true)
+  const handleClose = () => setOpen(false)
+
   return (
     <>
       <Card sx={{maxWidth: 248, maxHeight: 204}} className={styles.wrapper}>
@@ -23,7 +27,7 @@ const Post = () => {
           </Typography>
         </CardContent>
         <CardActions className={styles.wrapperLink}>
-          <Button size='small' className={styles.link}>
+          <Button onClick={handleOpen} size='small' className={styles.link}>
             ПОСМОТРЕТЬ
           </Button>
         </CardActions>
@@ -33,4 +37,4 @@ const Post = () => {
   )
 }
 
-export default Post
+export default PreviewPost

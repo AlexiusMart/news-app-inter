@@ -1,11 +1,22 @@
-import styles from './posts.module.sass'
+import PreviewPost from '../preview-post/PreviewPost'
 
-const Posts = () => {
+import styles from './all-posts.module.scss'
+
+const AllPosts = () => {
   return (
     <>
-      
+      <div className={styles.wrapper}>
+          <PreviewPost />
+          <PreviewPost />
+          <PreviewPost />
+          <PreviewPost />
+          <PreviewPost />
+          <PreviewPost />
+          <PreviewPost />
+          <PreviewPost />
+        </div>
     </>
   )
 }
 
-export default Posts
+export default AllPosts
