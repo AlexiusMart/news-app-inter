@@ -1,5 +1,4 @@
 import TabsNewsPreview from '@/components/filter/tabs-news-preview/TabsNewsPreview'
-import Subtitle from '@/components/heading/subtitle/Subtitle'
 import {Typography} from '@mui/material'
 import styles from './modal-content.module.scss'
 
@@ -11,9 +10,9 @@ const ModalContent = () => {
           <TabsNewsPreview className={styles.tab} />
         </ul>
 
-        <Subtitle className={styles.subtitleModal}>
+        <Typography className={styles.subtitle}>
           Россия, Санкт-Петербург
-        </Subtitle>
+        </Typography>
 
         <Typography component='h1' className={styles.h1}>
           Поиск медицинских патологий на рентгеновских снимках с помощью

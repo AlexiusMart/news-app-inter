@@ -5,7 +5,10 @@
   list-style: none;
   margin: 0 40px 24px 40px;
 }
-.subtitleModal {
+.subtitle {
+  font-weight: $fw-bold;
+  font-size: $fs-subtitle;
+  color: $c-subtitle;
   margin: 24px 40px 0 40px;
   font-size: 22px;
 }

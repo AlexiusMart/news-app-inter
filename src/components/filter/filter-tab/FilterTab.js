@@ -1,10 +1,9 @@
 import styles from './filter-tab.module.scss'
 
-const FilterTab = () => {
+const FilterTab = ({application}) => {
   return (
     <>
-      <li className={`${styles.tab}`}>РИТЕЙЛ</li>
-      <li className={`${styles.tab} ${styles.active}`}>ПРОМЫШЛЕННОСТЬ</li>
+      <li className={`${styles.tab}`}>{application}</li>
     </>
   )
 }

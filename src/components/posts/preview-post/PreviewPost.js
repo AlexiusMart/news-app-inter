@@ -5,28 +5,24 @@ import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 
 import styles from './preview-post.module.scss'
-import SubTitle from '@/components/heading/subtitle/Subtitle'
+import ModalBox from '@/components/modal/modal-box/ModalBox'
 
-const PreviewPost = () => {
-  const [open, setOpen] = useState(false)
-  const handleOpen = () => setOpen(true)
-  const handleClose = () => setOpen(false)
-
+const PreviewPost = ({country, city, title, created}) => {
   return (
     <>
       <Card sx={{maxWidth: 248, maxHeight: 204}} className={styles.wrapper}>
         <CardContent>
-          <SubTitle />
+          <Typography className={styles.subtitle}>
+            {country}, {city}
+          </Typography>
           <Typography variant='h3' component='div' className={styles.h3}>
-            Банк доверил роботам процессы в операционном блоке
+            {title}
           </Typography>
         </CardContent>
         <CardActions className={styles.wrapperLink}>
-          <Button onClick={handleOpen} size='small' className={styles.link}>
-            ПОСМОТРЕТЬ
-          </Button>
+        <ModalBox />
         </CardActions>
-        <Typography className={styles.date}>Добавлено 6.02.2020</Typography>
+        <Typography className={styles.date}>Добавлено {created}</Typography>
       </Card>
     </>
   )

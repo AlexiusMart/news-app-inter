@@ -12,6 +12,14 @@
   border-radius: unset;
 }
 
+.subtitle {
+  font-weight: $fw-bold;
+  font-size: $fs-subtitle;
+  line-height: 20px;
+  color: $c-subtitle;
+  margin-bottom: 0;
+}
+
 .h3 {
   font-weight: $fw-bold;
   font-size: $fs-h3;
@@ -22,14 +30,6 @@
 
 .wrapperLink {
   margin-bottom: 4px;
-
-  .link {
-    font-weight: $fw-bold;
-    font-size: 14px;
-    line-height: 17px;
-    color: $c-primary;
-    margin: 4px;
-  }
 }
 
 .date {

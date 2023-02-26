@@ -9,6 +9,13 @@
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
   padding-top: 40px;
 }
+.link {
+  font-weight: $fw-bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: $c-primary;
+  margin: 4px;
+}
 
 .tab {
   color: $c-primary;
