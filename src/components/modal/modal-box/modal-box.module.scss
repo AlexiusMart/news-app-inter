@@ -20,3 +20,16 @@
 .tab {
   color: $c-primary;
 }
+
+.close {
+  position: absolute;
+  background-image: url(../../../../public/x.svg);
+  background-repeat: no-repeat;
+  height: 33px;
+  min-width: 33px;
+  top: 37px;
+  right: 37px;
+}
+.close:hover {
+  background-color: unset;
+}

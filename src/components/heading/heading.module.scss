@@ -2,6 +2,9 @@
 
 .h1 {
   color: $c-h1;
+  font-weight: $fw-bold;
+  font-size: 36px;
+  line-height: 44px;
   .span {
     color: $c-primary;
   }

@@ -1,7 +1,6 @@
 import {useState} from 'react'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
 import Modal from '@mui/material/Modal'
 import ModalContent from '../modal-content/ModalContent'
 
@@ -14,7 +13,9 @@ export default function ModalBox() {
 
   return (
     <div>
-      <Button onClick={handleOpen} className={styles.link}>ПОСМОТРЕТЬ</Button>
+      <Button onClick={handleOpen} className={styles.link}>
+        ПОСМОТРЕТЬ
+      </Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -23,20 +24,9 @@ export default function ModalBox() {
       >
         <Box className={styles.box}>
           <ModalContent />
+          <Button onClick={handleClose} className={styles.close}></Button>
         </Box>
       </Modal>
     </div>
   )
 }
-
-// const ModalNews = () => {
-//   return (
-//     <>
-//       <Box className={styles.box}>
-//         <ModalContent />
-//       </Box>
-//     </>
-//   )
-// }
-
-// export default ModalNews

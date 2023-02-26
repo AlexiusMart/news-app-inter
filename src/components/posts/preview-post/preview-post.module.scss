@@ -1,6 +1,9 @@
 @import '@/styles/abstracts/variables.scss';
 
 .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
   width: 248px;
   height: 204px;
   padding: 16px 0px;
@@ -29,7 +32,8 @@
 }
 
 .wrapperLink {
-  margin-bottom: 4px;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .date {
