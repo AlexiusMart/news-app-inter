@@ -6,28 +6,30 @@ import Typography from '@mui/material/Typography'
 import styles from './preview-post.module.scss'
 import ModalBox from '@/components/modal/modal-box/ModalBox'
 
-const PreviewPost = ({country, city, title, created}) => {
+const PreviewPost = ({post}) => {
   function shortenedTitle() {
-    let shortTitle = title
+    let shortTitle = post.title
 
-    if (title.length > 20) {
-      const lastSpaceIndex = title.lastIndexOf(' ', 39)
+    if (post.title.length > 20) {
+      const lastSpaceIndex = post.title.lastIndexOf(' ', 39)
       shortTitle =
         lastSpaceIndex === -1
-          ? title.slice(0, 40)
-          : title.slice(0, lastSpaceIndex)
+          ? post.title.slice(0, 40)
+          : post.title.slice(0, lastSpaceIndex)
       shortTitle += '...'
     }
     return shortTitle
   }
 
   function changeFormatDate(created) {
-    const dateString = created
-    const date = new Date(dateString)
-    const day = date.getDate().toString().padStart(2, '0')
-    const month = (date.getMonth() + 1).toString().padStart(2, '0')
-    const year = date.getFullYear()
-    const formattedDate = `${day}.${month}.${year}`
+    const date = new Date(created)
+    const options = {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric'
+    }
+
+    const formattedDate = new Intl.DateTimeFormat('ru-RU', options).format(date)
     return formattedDate
   }
 
@@ -36,17 +38,17 @@ const PreviewPost = ({country, city, title, created}) => {
       <Card sx={{maxWidth: 248, maxHeight: 204}} className={styles.wrapper}>
         <CardContent>
           <Typography className={styles.subtitle}>
-            {country}, {city}
+            {post.country}, {post.city}
           </Typography>
           <Typography variant='h3' component='div' className={styles.h3}>
-            {shortenedTitle(title)}
+            {shortenedTitle(post.title)}
           </Typography>
         </CardContent>
         <CardActions className={styles.wrapperLink}>
-          <ModalBox />
+          <ModalBox post={post} />
         </CardActions>
         <Typography className={styles.date}>
-          Добавлено {changeFormatDate(created)}
+          Добавлено {changeFormatDate(post.created)}
         </Typography>
       </Card>
     </>

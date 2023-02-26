@@ -6,14 +6,22 @@ import ModalContent from '../modal-content/ModalContent'
 
 import styles from './modal-box.module.scss'
 
-export default function ModalBox() {
+export default function ModalBox({post}) {
   const [open, setOpen] = useState(false)
-  const handleOpen = () => setOpen(true)
-  const handleClose = () => setOpen(false)
+  const [selectedNews, setSelectedNews] = useState(null)
+
+  const handleOpen = (news) => {
+    setSelectedNews(news)
+    setOpen(true)
+  }
+  const handleClose = () => {
+    setSelectedNews(null)
+    setOpen(false)
+  }
 
   return (
     <div>
-      <Button onClick={handleOpen} className={styles.link}>
+      <Button onClick={() => handleOpen(post)} className={styles.link}>
         ПОСМОТРЕТЬ
       </Button>
       <Modal
@@ -23,7 +31,7 @@ export default function ModalBox() {
         aria-describedby='modal-modal-description'
       >
         <Box className={styles.box}>
-          <ModalContent />
+          <ModalContent news={selectedNews} />
           <Button onClick={handleClose} className={styles.close}></Button>
         </Box>
       </Modal>

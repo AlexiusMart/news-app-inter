@@ -18,7 +18,7 @@ const AllPosts = () => {
   return (
     <>
       <div className={styles.wrapper}>
-        {posts && posts.map(post => <PreviewPost key={post.id} {...post} />)}
+        {posts && posts.map(post => <PreviewPost key={post.id} post={post} />)}
       </div>
     </>
   )
