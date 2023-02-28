@@ -1,27 +1,31 @@
 import {Button} from '@mui/material'
 import styles from './button-all.module.scss'
 
-const ButtonAll = ({setShowAll}) => {
+const ButtonAll = ({mobile, setCountPosts, posts}) => {
   return (
     <div className={styles.wrapper}>
       <Button
         variant='outlined'
         className={styles.btn}
-        onClick={() => setShowAll(true)}
+        onClick={() =>
+          !mobile
+            ? setCountPosts(posts.length)
+            : setCountPosts(prevCount => prevCount + 8)
+        }
       >
-        Показать все
+        {!mobile ? 'Показать все' : 'Показать еще'}
       </Button>
     </div>
   )
 }
 
-const ButtonCol = ({setShowAll}) => {
+const ButtonCol = ({setCountPosts}) => {
   return (
     <div className={styles.wrapper}>
       <Button
         variant='outlined'
         className={styles.btn}
-        onClick={() => setShowAll(false)}
+        onClick={() => setCountPosts(8)}
       >
         Свернуть все
       </Button>

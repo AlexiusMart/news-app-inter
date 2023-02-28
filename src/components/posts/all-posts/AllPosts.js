@@ -4,15 +4,13 @@ import PreviewPost from '../preview-post/PreviewPost'
 
 import styles from './all-posts.module.scss'
 
-const AllPosts = ({showAll}) => {
-  const [posts, setPosts] = useState([])
-
+const AllPosts = ({countPosts, posts, setPosts}) => {
   useEffect(() => {
     getAllData().then(res => setPosts(res))
   }, [])
 
   const getMainListNews = res => {
-    return showAll ? res : res.slice(0, 8)
+    return res.slice(0, countPosts)
   }
 
   return (
