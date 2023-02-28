@@ -29,6 +29,10 @@ const PreviewPost = ({post}) => {
       year: 'numeric'
     }
 
+  const dateUpdate = () => {
+    
+  }
+
     const formattedDate = new Intl.DateTimeFormat('ru-RU', options).format(date)
     return formattedDate
   }
@@ -38,7 +42,7 @@ const PreviewPost = ({post}) => {
       <Card sx={{maxWidth: 248, maxHeight: 204}} className={styles.wrapper}>
         <CardContent>
           <Typography className={styles.subtitle}>
-            {post.country}, {post.city}
+            {post.country}{post.city ? `, ${post.city}` : ''}
           </Typography>
           <Typography variant='h3' component='div' className={styles.h3}>
             {shortenedTitle(post.title)}
@@ -48,7 +52,7 @@ const PreviewPost = ({post}) => {
           <ModalBox post={post} />
         </CardActions>
         <Typography className={styles.date}>
-          Добавлено {changeFormatDate(post.created)}
+          {post.updated ? 'Обновлено' : 'Добавлено'} {changeFormatDate(post.updated ?? post.created)}
         </Typography>
       </Card>
     </>

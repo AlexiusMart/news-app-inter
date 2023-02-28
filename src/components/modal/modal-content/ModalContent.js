@@ -10,7 +10,8 @@ const ModalContent = ({news}) => {
           <TabsNewsPreview {...news} className={styles.tab} />
         </ul>
         <Typography className={styles.subtitle}>
-          {news.city}, {news.country}
+          {news.country}
+          {news.city ? `, ${news.city}` : ''}
         </Typography>
         <Typography component='h1' className={styles.h1}>
           {news.title}

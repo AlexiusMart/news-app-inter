@@ -44,7 +44,7 @@ const FilterAllTabs = ({selectedFilters, setSelectedFilters}) => {
         </ul>
       </div>
       <div className={styles.reset}>
-        <FilterReset />
+        <FilterReset setSelectedFilters={setSelectedFilters} />
       </div>
     </div>
   )
