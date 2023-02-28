@@ -17,7 +17,6 @@ const ModalContent = ({news}) => {
         </Typography>
         <div className={styles.info}>
           <div className={styles.infoWrapper}>
-          {news.object}?.
             <Typography className={styles.infoTitle}>
               Объект внедрения
             </Typography>

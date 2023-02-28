@@ -4,21 +4,24 @@ import PreviewPost from '../preview-post/PreviewPost'
 
 import styles from './all-posts.module.scss'
 
-const AllPosts = () => {
+const AllPosts = ({showAll}) => {
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
-    getAllData().then(res => setPosts(getMainListNews(res)))
+    getAllData().then(res => setPosts(res))
   }, [])
 
   const getMainListNews = res => {
-    return res.slice(0, 8)
+    return showAll ? res : res.slice(0, 8)
   }
 
   return (
     <>
       <div className={styles.wrapper}>
-        {posts && posts.map(post => <PreviewPost key={post.id} post={post} />)}
+        {posts &&
+          getMainListNews(posts).map(post => (
+            <PreviewPost key={post.id} post={post} />
+          ))}
       </div>
     </>
   )
