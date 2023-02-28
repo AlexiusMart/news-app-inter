@@ -23,7 +23,7 @@ const NewsContainer = () => {
     return post.slice(0, countPosts)
   }
 
-  //тогл постов из фильтра или всех
+  //тогл постов из фильтра
   const filteredPosts =
     selectedFilters.length !== 0
       ? posts.filter(post => selectedFilters.includes(post.application))
@@ -31,7 +31,7 @@ const NewsContainer = () => {
 
   return (
     <div className={styles.wrapper}>
-      <Heading countPosts={countPosts} />
+      <Heading filteredPosts={filteredPosts} />
       <FilterAllTabs
         selectedFilters={selectedFilters}
         setSelectedFilters={setSelectedFilters}

@@ -2,11 +2,11 @@ import {Typography} from '@mui/material'
 
 import styles from './heading.module.scss'
 
-const Heading = ({countPosts}) => {
+const Heading = ({filteredPosts}) => {
   return (
     <>
       <Typography className={styles.h1}>
-        Заголовок <span className={styles.span}>({countPosts})</span>
+        Заголовок <span className={styles.span}>({filteredPosts.length})</span>
       </Typography>
     </>
   )
