@@ -5,13 +5,16 @@ import FilterTab from '../filter-tab/FilterTab'
 
 import styles from './filter-all-tabs.module.scss'
 
-const FilterAllTabs = () => {
+const FilterAllTabs = ({selectedFilters, setSelectedFilters}) => {
   const [filters, setFilters] = useState([])
 
   useEffect(() => {
-    getAllData().then(res => setFilters(res))
+    getAllData().then(res =>
+      setFilters(res.sort((a, b) => b.length - a.length))
+    )
   }, [])
 
+  // объединение значений фильтров
   function mergeFiltersValue(data, propName) {
     let result = {}
     data.forEach(item => {
@@ -31,7 +34,12 @@ const FilterAllTabs = () => {
       <div>
         <ul className={styles.tabs}>
           {mergeFilter.map(filter => (
-            <FilterTab key={filter.id} {...filter} />
+            <FilterTab
+              key={filter.id}
+              {...filter}
+              setSelectedFilters={setSelectedFilters}
+              selectedFilters={selectedFilters}
+            />
           ))}
         </ul>
       </div>
