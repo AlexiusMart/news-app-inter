@@ -1,5 +1,3 @@
-import Favicon from '@/components/Head/favicon/Favicon'
-import Seo from '@/components/Head/seo/Seo'
 import Head from 'next/head'
 import MainContainer from '@/components/container/main-conteiner/MainContainer'
 
@@ -14,7 +12,6 @@ const Home = () => {
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
-        <Favicon />
       </Head>
 
       <MainContainer />
