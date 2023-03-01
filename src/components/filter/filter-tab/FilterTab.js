@@ -1,12 +1,12 @@
 import styles from './filter-tab.module.scss'
 
-const FilterTab = ({application, selectedFilters, setSelectedFilters}) => {
+const FilterTab = ({filter, selectedFilters, setSelectedFilters}) => {
   // проверяем есть ли категория в массиве
   const selectedFilterNews = () => {
-    if (selectedFilters.includes(application)) {
-      setSelectedFilters(selectedFilters.filter(elem => elem !== application))
+    if (selectedFilters.includes(filter)) {
+      setSelectedFilters(selectedFilters.filter(elem => elem !== filter))
     } else {
-      setSelectedFilters([...selectedFilters, application])
+      setSelectedFilters([...selectedFilters, filter])
     }
   }
 
@@ -14,11 +14,11 @@ const FilterTab = ({application, selectedFilters, setSelectedFilters}) => {
     <>
       <li
         className={`${styles.tab} ${
-          selectedFilters.includes(application) ? styles.active : ''
+          selectedFilters.includes(filter) ? styles.active : ''
         }`}
-        onClick={() => selectedFilterNews()}
+        onClick={selectedFilterNews}
       >
-        {application}
+        {filter}
       </li>
     </>
   )

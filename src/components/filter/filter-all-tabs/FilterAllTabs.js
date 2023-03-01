@@ -12,44 +12,38 @@ const FilterAllTabs = ({selectedFilters, setSelectedFilters}) => {
     getAllData().then(res => setFilters(res))
   }, [])
 
-  // объединение значений фильтров
+  // объединение и сортировка категорий
   function mergeFiltersValue(data, propName) {
     let result = {}
+
     data.forEach(item => {
       if (!result[item[propName]]) {
-        result[item[propName]] = item
+        result[item[propName]] = [item]
       } else {
-        Object.assign(result[item[propName]], item)
+        result[item[propName]].push(item)
       }
     })
-    console.log(Object.values(result))
-    return Object.values(result)
+    let sortCategory = Object.entries(result).map((arr, i) => {
+      return [arr[0], arr[1].length]
+    })
+
+    sortCategory.sort((a, b) => {
+      return b[1] - a[1]
+    })
+
+    return sortCategory
   }
 
   const mergeFilter = mergeFiltersValue(filters, 'application')
-
-  // сортировка элементов по кол-ву
-  const mergeFilterSorted = useMemo(() => {
-    return mergeFilter.sort((a, b) => {
-      const countA = mergeFilter.filter(
-        filter => filter.application === a.application
-      ).length
-      const countB = mergeFilter.filter(
-        filter => filter.application === b.application
-      ).length
-  
-      return countB - countA
-    })
-  }, [mergeFilter])
 
   return (
     <div className={styles.wrapper}>
       <div>
         <ul className={styles.tabs}>
-          {mergeFilterSorted.map(filter => (
+          {mergeFilter.map(([filter]) => (
             <FilterTab
-              key={filter.id}
-              {...filter}
+              key={filter}
+              filter={filter}
               setSelectedFilters={setSelectedFilters}
               selectedFilters={selectedFilters}
             />

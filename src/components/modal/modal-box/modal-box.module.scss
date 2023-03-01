@@ -9,6 +9,7 @@
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
   padding-top: 40px;
 }
+
 .link {
   font-weight: $fw-bold;
   font-size: 14px;
@@ -23,13 +24,38 @@
 
 .close {
   position: absolute;
-  background-image: url(../../../../public/x.svg);
+  background-image: url(/x.svg);
   background-repeat: no-repeat;
   height: 33px;
   min-width: 33px;
   top: 37px;
   right: 37px;
 }
+
 .close:hover {
   background-color: unset;
+}
+
+@media screen and (max-width: 1399px) {
+}
+
+@media screen and (max-width: 1199px) {
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (max-width: 575px) {
+}
+
+@media screen and (max-width: 319px) {
+  .box {
+    margin: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .close {
+    right: 20px;
+  }
 }
