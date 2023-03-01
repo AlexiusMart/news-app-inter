@@ -7,5 +7,39 @@
   background: #303030;
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
-  min-height: 937px;
+}
+
+@media screen and (max-width: 1399px) {
+  .wrapper {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .wrapper {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .wrapper {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  .wrapper {
+    width: 100%;
+    padding: 15px;
+  }
 }

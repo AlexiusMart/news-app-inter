@@ -9,3 +9,9 @@
     color: $c-primary;
   }
 }
+
+@media screen and (max-width: 319px) {
+  .h1 {
+    font-size: 32px;
+  }
+}

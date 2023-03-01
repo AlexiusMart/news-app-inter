@@ -7,4 +7,55 @@
   row-gap: 59px;
   margin-top: 40px;
   justify-content: space-between;
+  grid-auto-rows: 200px;
+}
+
+@media (max-width: 1400px) {
+  .wrapper {
+    grid-template-columns: repeat(3, auto);
+    column-gap: 45px;
+    row-gap: 45px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1199px) {
+  .wrapper {
+    grid-template-columns: repeat(2, auto);
+    column-gap: 45px;
+    row-gap: 45px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    grid-template-columns: repeat(2, auto);
+    column-gap: 45px;
+    row-gap: 45px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .wrapper {
+    grid-template-columns: repeat(1, auto);
+    column-gap: 25px;
+    row-gap: 30px;
+    
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 319px) {
+  .wrapper {
+    grid-template-columns: repeat(1, auto);
+    row-gap: 45px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

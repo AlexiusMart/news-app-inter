@@ -17,27 +17,37 @@ const ModalContent = ({news}) => {
           {news.title}
         </Typography>
         <div className={styles.info}>
-          <div className={styles.infoWrapper}>
-            <Typography className={styles.infoTitle}>
-              Объект внедрения
-            </Typography>
-            <Typography className={styles.infoDescr}>{news.object}</Typography>
-          </div>
-          <div className={styles.infoWrapper}>
-            <Typography className={styles.infoTitle}>
-              Применяемое решение
-            </Typography>
-            <Typography className={styles.infoDescr}>
-              {news.direction}
-            </Typography>
-          </div>
-          <div className={styles.infoWrapper}>
-            <Typography className={styles.infoTitle}>Разработчик</Typography>
-            <Typography className={styles.infoDescr}>
-              {news.developer}
-            </Typography>
-          </div>
+          {news.object ? (
+            <div className={styles.infoWrapper}>
+              <Typography className={styles.infoTitle}>
+                Объект внедрения
+              </Typography>
+              <Typography className={styles.infoDescr}>
+                {news.object}
+              </Typography>
+            </div>
+          ) : null}
+          {news.direction ? (
+            <div className={styles.infoWrapper}>
+              <Typography className={styles.infoTitle}>
+                Применяемое решение
+              </Typography>
+              <Typography className={styles.infoDescr}>
+                {news.direction}
+              </Typography>
+            </div>
+          ) : null}
+
+          {news.developer ? (
+            <div className={styles.infoWrapper}>
+              <Typography className={styles.infoTitle}>Разработчик</Typography>
+              <Typography className={styles.infoDescr}>
+                {news.developer}
+              </Typography>
+            </div>
+          ) : null}
         </div>
+
         <div className={styles.description}>
           <Typography className={styles.titleDescription}>Описание</Typography>
           <Typography className={styles.mainDescription}>

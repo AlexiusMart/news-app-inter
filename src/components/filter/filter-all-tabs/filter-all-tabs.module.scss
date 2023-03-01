@@ -3,13 +3,74 @@
 .wrapper {
   margin-top: 24px;
   display: flex;
-  .tabs {
-    display: flex;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-right: 64px;
+}
+
+.reset {
+  width: 82px;
+}
+
+@media screen and (max-width: 1399px) {
+  .wrapper {
     flex-wrap: wrap;
-    list-style: none;
-    margin-right: 64px;
+    justify-content: flex-end;
   }
-  .reset {
-    width: 82px;
+}
+
+@media screen and (max-width: 1199px) {
+  .wrapper {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    margin-top: 20px;
+  }
+
+  .wrapper {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .tabs {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .wrapper {
+    margin-top: 20px;
+  }
+
+  .wrapper {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .tabs {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  .wrapper {
+    margin-top: 20px;
+  }
+
+  .wrapper {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .tabs {
+    margin-right: 0px;
   }
 }
