@@ -51,7 +51,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 851px;
-  height: 197px;
+  height: auto;
   background: #2b8580;
   padding: 0 40px;
 }
@@ -95,7 +95,6 @@
   .info {
     grid-template-columns: repeat(1, auto);
     width: 100%;
-    height: 100%;
     padding: 0 20px;
   }
 
