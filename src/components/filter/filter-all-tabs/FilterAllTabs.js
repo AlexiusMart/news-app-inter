@@ -5,7 +5,11 @@ import FilterTab from '../filter-tab/FilterTab'
 
 import styles from './filter-all-tabs.module.scss'
 
-const FilterAllTabs = ({selectedFilters, setSelectedFilters}) => {
+const FilterAllTabs = ({
+  setCountPosts,
+  selectedFilters,
+  setSelectedFilters
+}) => {
   const [filters, setFilters] = useState([])
 
   useEffect(() => {
@@ -51,7 +55,10 @@ const FilterAllTabs = ({selectedFilters, setSelectedFilters}) => {
         </ul>
       </div>
       <div className={styles.reset}>
-        <FilterReset setSelectedFilters={setSelectedFilters} />
+        <FilterReset
+          setCountPosts={setCountPosts}
+          setSelectedFilters={setSelectedFilters}
+        />
       </div>
     </div>
   )

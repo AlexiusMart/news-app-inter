@@ -33,12 +33,13 @@ const NewsContainer = () => {
     <div className={styles.wrapper}>
       <Heading filteredPosts={filteredPosts} />
       <FilterAllTabs
+        setCountPosts={setCountPosts}
         selectedFilters={selectedFilters}
         setSelectedFilters={setSelectedFilters}
       />
       <AllPosts posts={filteredPosts} getMainListNews={getMainListNews} />
 
-      {posts.length >= 8 &&
+      {filteredPosts.length >= 8 &&
         (countPosts >= posts.length ? (
           <ButtonCol setCountPosts={setCountPosts} />
         ) : (
