@@ -40,7 +40,7 @@ const NewsContainer = () => {
       <AllPosts posts={filteredPosts} getMainListNews={getMainListNews} />
 
       {filteredPosts.length >= 8 &&
-        (countPosts >= posts.length ? (
+        (countPosts >= filteredPosts.length ? (
           <ButtonCol setCountPosts={setCountPosts} />
         ) : (
           <ButtonAll
